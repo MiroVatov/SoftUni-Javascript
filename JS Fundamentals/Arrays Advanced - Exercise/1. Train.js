@@ -1,15 +1,15 @@
 function train(inputArr) {
-    let wagonsArr = inputArr.shift().split(' ').map(x => Number(x));
-    let maxCapacity = Number(inputArr.shift());
+    let wagonsArr = inputArr.shift().split(' ').map(x => +(x));
+    let maxCapacity = +(inputArr.shift());
 
     for (let command of inputArr){
         if (command.includes('Add')){
             let pass = command.split(' ');
-            let passengers = Number(pass[1]);
+            let passengers = +(pass[1]);
             wagonsArr.push(passengers);
         }
         else{
-            let passengersCount = Number(command);
+            let passengersCount = +(command);
 
             // Version 1  ==> NOT WORKING -> map arrow Function
 
@@ -34,28 +34,28 @@ function train(inputArr) {
         }
     }
 
-    console.log(wagonsArr.join(' '));
+    return wagonsArr.join(' ');
 }
 
-train(['32 54 21 12 4 0 23',
+console.log(train(['32 54 21 12 4 0 23',
 '75',
 'Add 10',
 'Add 0',
 '30',
 '10',
 '75']
-);
+));
 
-train(['32 54 21 12 4 0 23',
+console.log(train(['32 54 21 12 4 0 23',
 '75',
 'Add 10',
 'Add 0',
 '30',
 '10',
 '75']
-);
+));
 
-train(['0 0 0 10 2 4',
+console.log(train(['0 0 0 10 2 4',
 '10',
 'Add 10',
 '10',
@@ -63,4 +63,4 @@ train(['0 0 0 10 2 4',
 '10',
 '8',
 '6']
-);
+));

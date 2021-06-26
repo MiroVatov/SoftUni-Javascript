@@ -23,19 +23,19 @@ function houseParty(guestList) {
             }
         }
     }
-    console.log(guestsArrived.join('\n'));
+    return guestsArrived.join('\n');
 }
 
 
-houseParty(['Allie is going!',
+console.log(houseParty(['Allie is going!',
 'George is going!',
 'John is not going!',
 'George is not going!']
-);
+));
 
-houseParty(['Tom is going!',
+console.log(houseParty(['Tom is going!',
 'Annie is going!',
 'Tom is going!',
 'Garry is going!',
 'Jerry is going!']
-);
+));
