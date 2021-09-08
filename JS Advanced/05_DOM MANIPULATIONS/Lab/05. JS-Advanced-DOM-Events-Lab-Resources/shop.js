@@ -1,1 +1,1 @@
-function createShop(){}
+function createShop(){};
