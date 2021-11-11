@@ -39,7 +39,7 @@ class ChristmasDinner {
             this.dishesNames.push(recipe.recipeName);
             return `${recipe.recipeName} has been successfully cooked!`;
         }
-        return `We do not have this product`;
+        throw new Error(`We do not have this product`);
     }
 
     _checkForProducts(productsList) {
